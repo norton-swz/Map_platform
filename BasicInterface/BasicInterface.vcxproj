@@ -70,15 +70,15 @@
     <Link>
       <AdditionalDependencies>opencv_world455d.lib;mergeAndDownsample.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\mergeAndDownsample\lib;E:\Source\cpp\BasicInterface\ThirdParty\opencv\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)ThirdParty\mergeAndDownsample\lib;$(SolutionDir)ThirdParty\opencv\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ClCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)Common;$(SolutionDir)ThirdParty\mergeAndDownsample\include;E:\Source\cpp\BasicInterface\ThirdParty\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Common;$(SolutionDir)ThirdParty\mergeAndDownsample\include;$(SolutionDir)ThirdParty\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <PostBuildEvent>
       <Command>Copy "$(SolutionDir)ThirdParty\mergeAndDownsample\bin\*.dll" "$(TargetDir)"
-Copy "$(SolutionDir)ThirdParty\opencv\opencv\build\x64\vc15\bin\opencv_world455d.dll" "$(TargetDir)"</Command>
+Copy "$(SolutionDir)ThirdParty\opencv\build\x64\vc15\bin\opencv_world455d.dll" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
